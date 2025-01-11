@@ -14,7 +14,7 @@ from telegram import Bot, Update
 from telegram.ext import (ApplicationBuilder, CommandHandler, ContextTypes,
                           MessageHandler, Updater, filters)
 
-from episode import Episode
+from nrkup.episode import Episode
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO)

@@ -35,7 +35,7 @@ from bs4 import BeautifulSoup
 from diskcache import Cache
 from urllib3 import disable_warnings
 from yatetradki.tools.telega import TdlibClient
-from yatetradki.utils import must_env
+from nrkup.env import must_env
 
 from episode import Episode, ui_notify, which
 
