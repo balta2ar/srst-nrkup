@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
     requirements = [r for r in requirements if r and not r.startswith('#')]
 
 setup(
-    name='nrkup',
+    name='srst-nrkup',
     version='1.0.0',
     description='NRK Download and Telegram Bot Integration',
     author='Yuri Bochkarev',
