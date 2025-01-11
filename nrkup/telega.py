@@ -1,17 +1,13 @@
-from contextlib import contextmanager
 import logging
-from urllib.parse import quote
+from contextlib import contextmanager
 from datetime import datetime
-from time import sleep
-from os.path import expanduser, expandvars
-from os.path import basename
+from os.path import basename, expanduser, expandvars
+from urllib.parse import quote
 
 import requests
+from telegram.client import Telegram
 
 from nrkup.env import must_env
-
-from telegram.client import Telegram
-from telegram.text import Text
 
 logging.getLogger("requests").setLevel(logging.WARNING)
 

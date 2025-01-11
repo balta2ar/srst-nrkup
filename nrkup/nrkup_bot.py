@@ -4,15 +4,16 @@
 # Use this simple bot to normalize & compress audio messages sent to the audio cards channel.
 #
 import logging
-import subprocess
 from os import environ
-from os.path import expanduser, expandvars, exists
-from tempfile import TemporaryDirectory
-import requests
+from os.path import exists, expanduser, expandvars
 
-from telegram import Bot, Update
-from telegram.ext import (ApplicationBuilder, CommandHandler, ContextTypes,
-                          MessageHandler, Updater, filters)
+import requests
+from telegram import Update
+from telegram.ext import (
+    ApplicationBuilder,
+    MessageHandler,
+    filters,
+)
 
 from nrkup.episode import Episode
 

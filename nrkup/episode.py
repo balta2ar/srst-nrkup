@@ -5,33 +5,21 @@ import re
 import shutil
 from asyncio import TimeoutError as AsyncioTimeoutError
 from asyncio import create_subprocess_shell
-from asyncio import new_event_loop
 from bisect import bisect_right
-from contextlib import asynccontextmanager
 from datetime import datetime
 from glob import glob
 from itertools import groupby
-from os import environ
 from os import makedirs
-from os.path import dirname
-from os.path import exists
-from os.path import expanduser
-from os.path import expandvars
-from os.path import getsize
-from os.path import isfile
-from os.path import join
+from os.path import dirname, exists, expanduser, expandvars, getsize, isfile, join
 from shlex import quote
 from tempfile import NamedTemporaryFile
 from typing import List
 
 import hachoir
 import pysubs2
-from aiohttp import ClientSession
-from aiohttp import web
-from aiohttp_middlewares import cors_middleware
 from bs4 import BeautifulSoup
 from diskcache import Cache
-from urllib3 import disable_warnings
+
 
 def expand(path):
     return expanduser(expandvars(path))

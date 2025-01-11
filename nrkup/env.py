@@ -1,7 +1,6 @@
 from os import environ
 from os.path import expanduser, expandvars
 
-
 DEFUALT_WIDTH = 100
 
 
