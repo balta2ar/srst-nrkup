@@ -17,6 +17,8 @@ from typing import List
 
 import hachoir
 import pysubs2
+from aiohttp import ClientSession, web
+from aiohttp_middlewares import cors_middleware
 from bs4 import BeautifulSoup
 from diskcache import Cache
 
