@@ -3,6 +3,7 @@ import json
 import logging
 import re
 import shutil
+import sys
 from asyncio import TimeoutError as AsyncioTimeoutError
 from asyncio import create_subprocess_shell
 from bisect import bisect_right
@@ -64,7 +65,7 @@ async def async_run(args):
 
 
 def which(program):
-    paths = [None, '/usr/local/bin', '/usr/bin', '/bin', '~/bin', '~/.local/bin']
+    paths = [dirname(sys.executable), None, '/usr/local/bin', '/usr/bin', '/bin', '~/bin', '~/.local/bin']
     for path in paths:
         path = expanduser(expandvars(path)) if path else None
         path = shutil.which(program, path=path)
