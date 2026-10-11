@@ -1,10 +1,10 @@
 [Unit]
-Description=NRK news downloader & uploader helper
+Description=Telegram bot that downloads NRK programs and sends them to a telegram chat
 After=local-fs.target network.target
 
 [Service]
 Type=simple
-ExecStart=/home/bz/dev/src/srs-toolbelt/yatetradki/uitools/nrkup/nrkup.py
+ExecStart=%h/.local/bin/srst-nrkup-bot
 Restart=always
 
 [Install]

@@ -1,0 +1,7 @@
+old-leftovers/
+__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/
+.ropeproject/
